@@ -8,7 +8,7 @@ st.set_page_config(layout="wide")
 with st.sidebar:
     st.write("*Contact Info*")
     # GitHub
-    st.image("https://raw.githubusercontent.com/laurasto/onepager/images/accenture.aug.2017-072.jpg", width=200)
+    st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/accenture.aug.2017-072.jpg", width=200)
     # Local
     # st.image("./images/accenture.aug.2017-072.jpg", width=200)
     st.write("Laura Astola")
@@ -62,13 +62,13 @@ with tab1:
 
 with tab2:
     # GitHub
-    st.image("https://raw.githubusercontent.com/laurasto/onepager/images/Eindhoven_University_of_Technology_logo.png", width=150)
+    st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/Eindhoven_University_of_Technology_logo.png", width=150)
     # Local
     # st.image('images/Eindhoven_University_of_Technology_logo.png', width=150)
     st.write("PhD Applied Mathematics, 2010")
     st.link_button("Thesis in Google Scholar", 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZJZIls8AAAAJ&cstart=20&pagesize=80&citation_for_view=ZJZIls8AAAAJ:WF5omc3nYNoC')
     # GitHub
-    st.image("https://raw.githubusercontent.com/laurasto/onepager/images/Helsinki_University_of_Technology_logo.png", width=150)
+    st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/Helsinki_University_of_Technology_logo.png", width=150)
     # Local
     # st.image('images/Helsinki_University_of_Technology_logo.png', width=150)
     st.write('Helsinki University of Technology')
@@ -79,30 +79,43 @@ with tab2:
 with tab3:
     col1, col2, col3, col4,col5,col6,col7,col8, col9 = st.columns(9, gap="small")
     with col1:
-        # Inject CSS for styling
-        st.markdown("""
-        <style>
-        .custom-link-button {
+        # Inject CSS for styling since stlite does not allow reading from folder
+        st.markdown("""<style>.custom-link-button {
             display: inline-block;
             padding: 10px 20px;
             background-color: aquamarine; 
             color: #191970 !important;
-            border-radius: 8px;
-        }
-        </style>
+            border-radius: 8px;}</style>
         """, unsafe_allow_html=True)
-        # Create a styled link button using Markdown + HTML
-        st.markdown(
-            '<a href="https://www.udacity.com/certificate/e/01dd1d86-79b2-11f0-b061-2b2f4f747398" target="_blank" '
+        st.markdown('<a href="https://www.udacity.com/certificate/e/01dd1d86-79b2-11f0-b061-2b2f4f747398" target="_blank" '
             'class="custom-link-button">GitHub Actions</a>',
-            unsafe_allow_html=True
-        )
+            unsafe_allow_html=True)
+        st.markdown("""<style>.custom-link-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #E0FFFF; 
+            color: #191970 !important;
+            border-radius: 8px;}</style>
+        """, unsafe_allow_html=True)
+        st.markdown('<a href="https://www.coursera.org/account/accomplishments/verify/GL2Y2XL73XLR?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=project" target="_blank" '
+            'class="custom-link-button">Machine Learning with PySpark: Data Analysis using SQL</a>',
+            unsafe_allow_html=True)
+        st.markdown("""<style>.custom-link-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #FFE4E1; 
+            color: #191970 !important;
+            border-radius: 8px;}</style>
+        """, unsafe_allow_html=True)
+        st.markdown('<a href="https://www.coursera.org/account/accomplishments/verify/D6NXQUMG5XZ9" target="_blank" '
+            'class="custom-link-button">Apache Spark (TM) SQL for Data Analysts</a>',
+            unsafe_allow_html=True)
 
     with col2:
-        st.write("ok")
+
 
     with col3:
-        st.write("ok")
+
 
 
 
