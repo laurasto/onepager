@@ -27,31 +27,21 @@ jobs:
           app-path: streamlit_app.py
           ruff: true
 
+  deploy:
+    needs: streamlit
+    runs-on: ubuntu-latest
 
-#  build:
-#    runs-on: ubuntu-latest
-#    env:
-#      PATH_PREFIX: /${{github.event.repository.name}}/
-#    steps:
-#      # Checkout the repository
-#      - name: Checkout repository
-#        uses: actions/checkout@v4
-#
-#  deploy:
-#    needs: build
-#    runs-on: ubuntu-latest
-#
-#    permissions:
-#      pages: write
-#      id-token: write
-#
-#    steps:
-#      - name: download artifact
-#        uses: actions/download-artifact@v4
-#        with:
-#          name: github-pages
-#          path: _site
-#
-#      - name: Deploy to GitHub Pages
-#        uses: actions/deploy-pages@v4
+    permissions:
+      pages: write
+      id-token: write
+
+    steps:
+      - name: download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: github-pages
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
 
