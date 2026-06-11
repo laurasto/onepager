@@ -1,60 +1,39 @@
 
 # .github/workflows/workflow.yml
-name: Streamlit app
+name: Deploy stlite app to GitHub Pages
 
 on:
-  workflow_dispatch:
-    branches: ["master"]
-
   push:
     branches: ["master"]
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
-#  group: ${{ github.workflow }}-${{ github.ref }}
-#  cancel-in-progress: true
+  workflow_dispatch:
 
 permissions:
   contents: read
   pages: write
   id-token: write
-  issues: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 
 jobs:
-  streamlit:
+  build:
     runs-on: ubuntu-latest
-    env:
-      PATH_PREFIX: /${{github.event.repository.name}}/
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.13"
-      - uses: streamlit/streamlit-app-action@v0.0.3
-        with:
-          app-path: streamlit_app.py
-          ruff: true
-      # Setup pages
-      - name: Configure pages
-        uses: actions/configure-pages@v4
-      # Use GitHub Actions artifacts to upload a zip file
-      - name: Upload pages artifact
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: _site
+          path: dist
 
   deploy:
-    needs: streamlit
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
-      - name: download artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: github-pages
-          path: _site
-
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
 
