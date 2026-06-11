@@ -4,7 +4,8 @@
 import streamlit as st
 import pandas as pd
 
-# hardcoded workaround for stlite
+# hardcoded workarounds for stlite
+img_base64 = ""
 css = """/* Button 1 */
 .st-key-color1 a {
     background-color: aquamarine;
@@ -53,7 +54,10 @@ st.set_page_config(layout="wide")
 
 with st.sidebar:
     st.write("*Contact Info*")
-    st.image('images/accenture.aug.2017-072.jpg',width=200)
+    st.markdown(
+        f'<img src="data:image/jpeg;base64,{img_base64}" width="200">',
+        unsafe_allow_html=True
+    )
     st.write("Laura Astola")
     st.write("AI/ML Computational Science Associate Manager")
     st.write("📱 +31 622 098 982")
@@ -102,5 +106,7 @@ with tab3:
         st.link_button("Developing AI Applications on Azure",
                        'https://www.coursera.org/account/accomplishments/verify/MXJBBXUXWSS5',
                        key="color6", width="stretch")
+
+
 
 
