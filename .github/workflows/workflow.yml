@@ -9,8 +9,17 @@ on:
   push:
     branches: ["master"]
 
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+#  group: ${{ github.workflow }}-${{ github.ref }}
+#  cancel-in-progress: true
+
 permissions:
   contents: read
+  pages: write
+  id-token: write
+  issues: write
 
 jobs:
   streamlit:
@@ -26,14 +35,18 @@ jobs:
         with:
           app-path: streamlit_app.py
           ruff: true
+      # Setup pages
+      - name: Configure pages
+        uses: actions/configure-pages@v4
+      # Use GitHub Actions artifacts to upload a zip file
+      - name: Upload pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
 
   deploy:
     needs: streamlit
     runs-on: ubuntu-latest
-
-    permissions:
-      pages: write
-      id-token: write
 
     steps:
       - name: download artifact
