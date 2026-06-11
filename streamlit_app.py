@@ -3,9 +3,6 @@
 
 import streamlit as st
 import pandas as pd
-import json
-from datetime import date
-
 
 def load_css(file_name):
     with open(file_name) as f:
