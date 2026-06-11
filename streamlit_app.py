@@ -122,7 +122,7 @@ with tab2:
     st.write('Master\'s Degree in Mathematics, 2000')
 
 with tab3:
-    col1, col2, col3, col4,col5,col6,col7,col8, col9 = st.columns(9, gap="xsmall")
+    col1, col2, col3, col4,col5,col6,col7,col8, col9 = st.columns(9, gap="small")
     with col1:
         st.link_button("GitHub Actions",'https://www.udacity.com/certificate/e/01dd1d86-79b2-11f0-b061-2b2f4f747398', key="color1")
         st.link_button("Machine Learning with PySpark: Data Analysis using SQL",
