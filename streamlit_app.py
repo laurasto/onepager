@@ -90,16 +90,8 @@ with tab3:
         st.markdown('<a href="https://www.udacity.com/certificate/e/01dd1d86-79b2-11f0-b061-2b2f4f747398" target="_blank" '
             'class="custom-link-button">GitHub Actions</a>',
             unsafe_allow_html=True)
-        st.markdown("""<style>.custom-link-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #E0FFFF; 
-            color: #191970 !important;
-            border-radius: 8px;}</style>
-        """, unsafe_allow_html=True)
-        st.markdown('<a href="https://www.coursera.org/account/accomplishments/verify/GL2Y2XL73XLR?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=project" target="_blank" '
-            'class="custom-link-button">Machine Learning with PySpark: Data Analysis using SQL</a>',
-            unsafe_allow_html=True)
+
+    with col2:
         st.markdown("""<style>.custom-link-button {
             display: inline-block;
             padding: 10px 20px;
@@ -111,10 +103,17 @@ with tab3:
             'class="custom-link-button">Apache Spark (TM) SQL for Data Analysts</a>',
             unsafe_allow_html=True)
 
-    with col2:
-
-
     with col3:
+        st.markdown("""<style>.custom-link-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #E0FFFF; 
+            color: #191970 !important;
+            border-radius: 8px;}</style>
+        """, unsafe_allow_html=True)
+        st.markdown('<a href="https://www.coursera.org/account/accomplishments/verify/GL2Y2XL73XLR?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=project" target="_blank" '
+            'class="custom-link-button">Machine Learning with PySpark: Data Analysis using SQL</a>',
+            unsafe_allow_html=True)
 
 
 
