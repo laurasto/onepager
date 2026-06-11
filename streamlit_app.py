@@ -64,7 +64,38 @@ with st.sidebar:
 tab1, tab2, tab3 = st.tabs(["Work Experience", "Education & Languages", "Certificates"],width="stretch")
 
 with tab1:
-    wdf= pd.read_excel('./data/work_experience.xlsx')
+    # stlite cannot read external data, so hardcoded again
+    wdf = pd.DataFrame(columns=['Start', 'Finish', 'Client/Employer', 'Sector', 'Functional', 'Technical'])
+    start = ['2025-09-01','2024-09-01','2019-01-01','2018-06-15','2017-10-15','2017-08-17','2014-01-01','2011-01-01','2010-02-01','2006-02-01']
+    finish = ['2026-05-13','2025-09-20','2025-8-30','2018-10-15','2018-05-15','2017-10-15','2016-12-30','2013-12-30','2010-12-30','2010-01-23']
+    wdf['Start'] = pd.to_datetime(start).strftime('%b-%Y')
+    wdf['Finish'] = pd.to_datetime(finish).strftime('%b-%Y')
+    wdf['Client/Employer'] = ['DSM-Firmenich/Accenture','Fokker/Accenture','Rabobank/Accenture','DHL/Accenture','AXA/Accenture',\
+                              'Vodafone/Accenture','TU Eindhoven','Wageningen University',\
+                              'ASML/TU Eindhoven','TU Eindhoven']
+    wdf['Sector'] = ['Bio Tech','Aviation','Financial','Transport','Insurance','Telecom','Higher Education',
+                     'Higher Education','Semiconductor','Higher Education']
+    wdf['Functional'] = ['Build prototype central application where lab personnel can easily query\n internal information from database, clean and organize historical data to database',
+            'Deliver an interactive view on all contracts, users, their status and location etc. as python Plotly dashboard',
+            'Data Quality monitoring, building dashboards and reports for proactive measures, building scripts to retrieve, and validate external data sources for data quality improvements',
+            'Build and validate ML models, using various customer data to predict parcel weights and dimensions',
+            'Build application to extract, validate and display information from images of handwritten forms, using ML and Computer Vision',
+            'Train deep neural networks to recognize modem status from images',
+            'Design and lecture bachelor courses on medical image analysis and processing',
+            'Research on mathematical modeling of metabolic and genetic networks of tomatoes for cost efficient trait improvement',
+            'Research on alternative geometric modeling of diffraction gratings',
+            'PhD project on geometric modeling of diffusion tensor images to capture axonal connectivities in brain']
+    wdf['Technical'] = ['Databricks, Python, Streamlit, GitHub  Actions, Bitbucket, AzureML, Spotfire, Jira',
+                        'Python, AzureDevOps, Plotly, Infinity, SQL',
+                        'Informatica, Python, Power BI, Databricks, AzureDevOps, Git, SQL, OracleDB, IBM DB, DBVisualiser, SQLDeveloper, Mainframe',
+                        'Python, Sk-Learn, XGBoost, SQL',
+                        'Python,  Open CV, Azure cognitive services, Fuzzy matching, Javascript',
+                        'Python, Keras,  Open CV, Javascript',
+                        'Python, Matlab, Mathematica',
+                        'R, Matlab, Mathematica',
+                        'Matlab, Mathematica',
+                        'Matlab, Mathematica']
+
     st.dataframe(wdf, hide_index=True, column_config={'Start':st.column_config.TextColumn(width=25,
                                                                     help="Project starting month"),
                                                       'Finish':st.column_config.TextColumn(width=25,
