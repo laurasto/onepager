@@ -1,11 +1,9 @@
 # An interactive format of our beloved OnePager
 
-
 import streamlit as st
 import pandas as pd
 
-# hardcoded workarounds for stlite
-img_base64 = ""
+# hardcoded workaround for stlite
 css = """/* Button 1 */
 .st-key-color1 a {
     background-color: aquamarine;
@@ -54,10 +52,10 @@ st.set_page_config(layout="wide")
 
 with st.sidebar:
     st.write("*Contact Info*")
-    st.markdown(
-        f'<img src="data:image/jpeg;base64,{img_base64}" width="200">',
-        unsafe_allow_html=True
-    )
+    # GitHub
+    st.image("https://raw.githubusercontent.com/laurasto/onepager/images/accenture.aug.2017-072.jpg", width=200)
+    # Local
+    # st.image("./images/accenture.aug.2017-072.jpg", width=200)
     st.write("Laura Astola")
     st.write("AI/ML Computational Science Associate Manager")
     st.write("📱 +31 622 098 982")
@@ -77,10 +75,16 @@ with tab1:
                                 'Technical': st.column_config.TextColumn(help="Double-click a cell for wrapped text")})
 
 with tab2:
-    st.image('images/Eindhoven_University_of_Technology_logo.png', width=150)
+    # GitHub
+    st.image("https://raw.githubusercontent.com/laurasto/onepager/images/Eindhoven_University_of_Technology_logo.png", width=150)
+    # Local
+    # st.image('images/Eindhoven_University_of_Technology_logo.png', width=150)
     st.write("PhD Applied Mathematics, 2010")
     st.link_button("Thesis in Google Scholar", 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZJZIls8AAAAJ&cstart=20&pagesize=80&citation_for_view=ZJZIls8AAAAJ:WF5omc3nYNoC')
-    st.image('images/Helsinki_University_of_Technology_logo.png', width=150)
+    # GitHub
+    st.image("https://raw.githubusercontent.com/laurasto/onepager/images/Helsinki_University_of_Technology_logo.png", width=150)
+    # Local
+    # st.image('images/Helsinki_University_of_Technology_logo.png', width=150)
     st.write('Helsinki University of Technology')
     st.write('Licenciate\'s Degree in Mathematics, 2009')
     st.link_button("Thesis", 'https://alexandria.tue.nl/openaccess/Metis226803.pdf')
