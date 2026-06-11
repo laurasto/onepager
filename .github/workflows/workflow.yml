@@ -4,10 +4,10 @@ name: Streamlit app
 
 on:
   workflow_dispatch:
-    branches: ["main"]
+    branches: ["master"]
 
   push:
-    branches: ["main"]
+    branches: ["master"]
 
 permissions:
   contents: read
