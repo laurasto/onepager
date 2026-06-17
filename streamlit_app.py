@@ -69,71 +69,26 @@ with tab2:
     st.write('Master\'s Degree in Mathematics, 2000')
 
 with tab3:
-    col1, col2, col3, col4,col5,col6,col7,col8, col9 = st.columns(9, gap="small")
-    with col1:
-        # Inject CSS for styling since stlite does not allow reading from folder
-        st.markdown("""<style>.custom-link-button {
-            background-color: aquamarine; 
-            color: #191970 !important;
-            border-radius: 8px;}</style>
-        """, unsafe_allow_html=True)
-        st.markdown('<a href="https://www.udacity.com/certificate/e/01dd1d86-79b2-11f0-b061-2b2f4f747398" target="_blank" '
-            'class="custom-link-button">GitHub Actions</a>',
-            unsafe_allow_html=True)
-        st.markdown("""<style>.custom-link-button {
-            background-color: #FFF0F5; 
-            color: #191970 !important;
-            border-radius: 8px;}</style>
-        """, unsafe_allow_html=True)
-        st.markdown('<a href="https://www.udacity.com/certificate/e/bab5e9a8-6eab-11f0-bb2a-5ffcb77ac1ac" target="_blank" '
-            'class="custom-link-button">Fast API</a>',
-            unsafe_allow_html=True)
-        st.markdown("""<style>.custom-link-button {
-                    background-color: #F0FFF0; 
-                    color: #191970 !important;
-                    border-radius: 8px;}</style>
-                """, unsafe_allow_html=True)
-        st.markdown(
-            '<a href="https://www.coursera.org/account/accomplishments/verify/MXJBBXUXWSS5" target="_blank" '
-            'class="custom-link-button">Developing AI Applications on Azure</a>',
-            unsafe_allow_html=True)
+    st.link_button("GitHub Actions", "https://www.udacity.com/certificate/e/01dd1d86-79b2-11f0-b061-2b2f4f747398")
+    st.link_button("Fast API", "https://www.udacity.com/certificate/e/bab5e9a8-6eab-11f0-bb2a-5ffcb77ac1ac")
+    st.link_button("Developing AI Applications on Azure", "https://www.coursera.org/account/accomplishments/verify/MXJBBXUXWSS5")
+    st.link_button("Apache Spark (TM) SQL for Data Analysts", "https://www.coursera.org/account/accomplishments/verify/D6NXQUMG5XZ9")
+    st.link_button("Deep Learning Specialization", "https://www.coursera.org/account/accomplishments/specialization/7SYBZGUEQCX9")
+    st.link_button("Machine Learning with PySpark: Data Analysis using SQL", "https://www.coursera.org/account/accomplishments/verify/GL2Y2XL73XLR?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=project")
+    st.link_button("Generative AI and Large Language Models", "https://www.coursera.org/account/accomplishments/verify/EBZMCLUA6A2N?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course")
+    st.link_button("Exploratory Data Analysis", "https://www.coursera.org/account/accomplishments/verify/Q75SKMXNL98M")
+    st.link_button("Quantum Computing. Less Formulas - More Understanding", "https://www.coursera.org/account/accomplishments/verify/GKKLMZXX3CHX")
+    st.link_button("A Crash Course in Causality: Inferring Causal Effects from Observational Data", "https://www.coursera.org/account/accomplishments/verify/A4HCUHEMBFVH")
+    st.link_button("Linux: Introduction to Shell Scripting for DevOps", "https://www.coursera.org/account/accomplishments/verify/UA9V5PQP5L92")
+    st.link_button("Automation Scripts Using Bash", "https://www.coursera.org/account/accomplishments/verify/9NCAY8UNV37Q")
+    st.link_button("Data Visualization with Python", "https://www.coursera.org/account/accomplishments/verify/8YBQASE8Y2VE")
+    st.link_button("Create Your First Web App with Python and Flask", "https://www.coursera.org/account/accomplishments/verify/SHMC7CJ8NZYC")
+    st.link_button("Bank Loan Approval Prediction With Artificial Neural Nets", "https://www.coursera.org/account/accomplishments/verify/C3EL7QW8QGXU")
+    st.link_button("Version Control with Git", "https://www.coursera.org/account/accomplishments/verify/KYYPT6KQTJAJ")
 
-    with col2:
-        st.markdown("""<style>.custom-link-button {
-            background-color: #FFE4E1; 
-            color: #191970 !important;
-            border-radius: 8px;}</style>
-        """, unsafe_allow_html=True)
-        st.markdown('<a href="https://www.coursera.org/account/accomplishments/verify/D6NXQUMG5XZ9" target="_blank" '
-            'class="custom-link-button">Apache Spark (TM) SQL for Data Analysts</a>',
-            unsafe_allow_html=True)
-        st.markdown("""<style>.custom-link-button {
-                    background-color: #F5FFFA; 
-                    color: #191970 !important;
-                    border-radius: 8px;}</style>
-                """, unsafe_allow_html=True)
-        st.markdown('<a href="https://www.coursera.org/account/accomplishments/specialization/7SYBZGUEQCX9" target="_blank" '
-                    'class="custom-link-button">Deep Learning Specialization</a>',
-                    unsafe_allow_html=True)
 
-    with col3:
-        st.markdown("""<style>.custom-link-button {
-            background-color: #E0FFFF; 
-            color: #191970 !important;
-            border-radius: 8px;}</style>
-        """, unsafe_allow_html=True)
-        st.markdown('<a href="https://www.coursera.org/account/accomplishments/verify/GL2Y2XL73XLR?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=project" target="_blank" '
-            'class="custom-link-button">Machine Learning with PySpark: Data Analysis using SQL</a>',
-            unsafe_allow_html=True)
-        st.markdown("""<style>.custom-link-button {
-                    background-color: #F0FFFF; 
-                    color: #191970 !important;
-                    border-radius: 8px;}</style>
-                """, unsafe_allow_html=True)
-        st.markdown(
-            '<a href="https://www.coursera.org/account/accomplishments/verify/EBZMCLUA6A2N?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course" target="_blank" '
-            'class="custom-link-button">Generative AI and Large Language Models</a>',
-            unsafe_allow_html=True)
+
+
 
 
 
