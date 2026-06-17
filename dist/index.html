@@ -19,7 +19,7 @@
       import { mount } from "https://cdn.jsdelivr.net/npm/@stlite/browser@1.0.0/build/stlite.js";
 
       // The Streamlit application code is defined here
-      const streamlit_app_code = `# An interactive format of our beloved OnePager
+      const streamlit_app_code = `# An GitHub "compatible" mini cv
 
 import streamlit as st
 import pandas as pd
@@ -28,10 +28,7 @@ st.set_page_config(layout="wide")
 
 with st.sidebar:
     st.write("*Contact Info*")
-    # GitHub
     st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/accenture.aug.2017-072.jpg", width=200)
-    # Local
-    # st.image("./images/accenture.aug.2017-072.jpg", width=200)
     st.write("Laura Astola")
     st.write("AI/ML Computational Science Associate Manager")
     st.write("📱 +31 622 098 982")
@@ -40,7 +37,7 @@ with st.sidebar:
 tab1, tab2, tab3 = st.tabs(["Work Experience", "Education & Languages", "Certificates"],width="stretch")
 
 with tab1:
-    # stlite cannot read external data, so hardcoded again
+    # stlite cannot read external data, so data is hardcoded here until I create a typescript version
     wdf = pd.DataFrame(columns=['Start', 'Finish', 'Client/Employer', 'Sector', 'Functional', 'Technical'])
     start = ['2025-09-01','2024-09-01','2019-01-01','2018-06-15','2017-10-15','2017-08-17','2014-01-01','2011-01-01','2010-02-01','2006-02-01']
     finish = ['2026-05-13','2025-09-20','2025-8-30','2018-10-15','2018-05-15','2017-10-15','2016-12-30','2013-12-30','2010-12-30','2010-01-23']
@@ -82,59 +79,37 @@ with tab1:
                                 'Technical': st.column_config.TextColumn(help="Double-click a cell for wrapped text")})
 
 with tab2:
-    # GitHub
     st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/Eindhoven_University_of_Technology_logo.png", width=150)
-    # Local
-    # st.image('images/Eindhoven_University_of_Technology_logo.png', width=150)
     st.write("PhD Applied Mathematics, 2010")
     st.link_button("Thesis in Google Scholar", 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZJZIls8AAAAJ&cstart=20&pagesize=80&citation_for_view=ZJZIls8AAAAJ:WF5omc3nYNoC')
-    # GitHub
     st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/Helsinki_University_of_Technology_logo.png", width=150)
-    # Local
-    # st.image('images/Helsinki_University_of_Technology_logo.png', width=150)
     st.write('Helsinki University of Technology')
     st.write('Licenciate\\'s Degree in Mathematics, 2009')
     st.link_button("Thesis", 'https://alexandria.tue.nl/openaccess/Metis226803.pdf')
+    st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/Helsinki_University_logo.jpg", width=150)
     st.write('Master\\'s Degree in Mathematics, 2000')
 
 with tab3:
-    col1, col2, col3, col4,col5,col6,col7,col8, col9 = st.columns(9, gap="small")
-    with col1:
-        # Inject CSS for styling since stlite does not allow reading from folder
-        st.markdown("""<style>.custom-link-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: aquamarine; 
-            color: #191970 !important;
-            border-radius: 8px;}</style>
-        """, unsafe_allow_html=True)
-        st.markdown('<a href="https://www.udacity.com/certificate/e/01dd1d86-79b2-11f0-b061-2b2f4f747398" target="_blank" '
-            'class="custom-link-button">GitHub Actions</a>',
-            unsafe_allow_html=True)
+    st.link_button("GitHub Actions", "https://www.udacity.com/certificate/e/01dd1d86-79b2-11f0-b061-2b2f4f747398")
+    st.link_button("Fast API", "https://www.udacity.com/certificate/e/bab5e9a8-6eab-11f0-bb2a-5ffcb77ac1ac")
+    st.link_button("Developing AI Applications on Azure", "https://www.coursera.org/account/accomplishments/verify/MXJBBXUXWSS5")
+    st.link_button("Apache Spark (TM) SQL for Data Analysts", "https://www.coursera.org/account/accomplishments/verify/D6NXQUMG5XZ9")
+    st.link_button("Deep Learning Specialization", "https://www.coursera.org/account/accomplishments/specialization/7SYBZGUEQCX9")
+    st.link_button("Machine Learning with PySpark: Data Analysis using SQL", "https://www.coursera.org/account/accomplishments/verify/GL2Y2XL73XLR?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=project")
+    st.link_button("Generative AI and Large Language Models", "https://www.coursera.org/account/accomplishments/verify/EBZMCLUA6A2N?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course")
+    st.link_button("Exploratory Data Analysis", "https://www.coursera.org/account/accomplishments/verify/Q75SKMXNL98M")
+    st.link_button("Quantum Computing. Less Formulas - More Understanding", "https://www.coursera.org/account/accomplishments/verify/GKKLMZXX3CHX")
+    st.link_button("A Crash Course in Causality: Inferring Causal Effects from Observational Data", "https://www.coursera.org/account/accomplishments/verify/A4HCUHEMBFVH")
+    st.link_button("Linux: Introduction to Shell Scripting for DevOps", "https://www.coursera.org/account/accomplishments/verify/UA9V5PQP5L92")
+    st.link_button("Automation Scripts Using Bash", "https://www.coursera.org/account/accomplishments/verify/9NCAY8UNV37Q")
+    st.link_button("Data Visualization with Python", "https://www.coursera.org/account/accomplishments/verify/8YBQASE8Y2VE")
+    st.link_button("Create Your First Web App with Python and Flask", "https://www.coursera.org/account/accomplishments/verify/SHMC7CJ8NZYC")
+    st.link_button("Bank Loan Approval Prediction With Artificial Neural Nets", "https://www.coursera.org/account/accomplishments/verify/C3EL7QW8QGXU")
+    st.link_button("Version Control with Git", "https://www.coursera.org/account/accomplishments/verify/KYYPT6KQTJAJ")
 
-    with col2:
-        st.markdown("""<style>.custom-link-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #FFE4E1; 
-            color: #191970 !important;
-            border-radius: 8px;}</style>
-        """, unsafe_allow_html=True)
-        st.markdown('<a href="https://www.coursera.org/account/accomplishments/verify/D6NXQUMG5XZ9" target="_blank" '
-            'class="custom-link-button">Apache Spark (TM) SQL for Data Analysts</a>',
-            unsafe_allow_html=True)
 
-    with col3:
-        st.markdown("""<style>.custom-link-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #E0FFFF; 
-            color: #191970 !important;
-            border-radius: 8px;}</style>
-        """, unsafe_allow_html=True)
-        st.markdown('<a href="https://www.coursera.org/account/accomplishments/verify/GL2Y2XL73XLR?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=project" target="_blank" '
-            'class="custom-link-button">Machine Learning with PySpark: Data Analysis using SQL</a>',
-            unsafe_allow_html=True)
+
+
 
 
 
