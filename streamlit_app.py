@@ -3,7 +3,7 @@
 import streamlit as st
 import pandas as pd
 
-st.set_page_config(page_title="OnePager", page_icon=":lemon:", layout="wide", initial_sidebar_state=None, menu_items=None)
+st.set_page_config(page_title="OnePager", page_icon="https://raw.githubusercontent.com/laurasto/onepager/master/images/work_history.svg", layout="wide", initial_sidebar_state=None, menu_items=None)
 with st.sidebar:
     st.write("*Contact Info*")
     st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/accenture.aug.2017-072.jpg", width=200)
