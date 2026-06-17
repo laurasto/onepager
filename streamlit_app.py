@@ -3,7 +3,7 @@
 import streamlit as st
 import pandas as pd
 
-st.set_page_config(page_title="OnePager", page_icon="https://raw.githubusercontent.com/laurasto/onepager/master/images/work_history.svg", layout="wide", initial_sidebar_state=None, menu_items=None)
+st.set_page_config(page_title="OnePager", layout="wide")
 with st.sidebar:
     st.write("*Contact Info*")
     st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/accenture.aug.2017-072.jpg", width=200)
@@ -71,10 +71,10 @@ with tab1:
 with tab2:
     col1, col2 = st.columns(2)
     with col1:
-        st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/Eindhoven_University_of_Technology_logo.png", width=150)
+        st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/Eindhoven_University_of_Technology_logo.png", width=140)
         st.write("PhD Applied Mathematics, 2010")
         st.link_button("Thesis in Google Scholar", 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZJZIls8AAAAJ&cstart=20&pagesize=80&citation_for_view=ZJZIls8AAAAJ:WF5omc3nYNoC')
-        st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/Helsinki_University_of_Technology_logo.png", width=150)
+        st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/Helsinki_University_of_Technology_logo.png", width=120)
         st.write('Helsinki University of Technology')
         st.write('Licenciate\'s Degree in Mathematics, 2009')
         st.link_button("Thesis", 'https://alexandria.tue.nl/openaccess/Metis226803.pdf')
@@ -83,10 +83,10 @@ with tab2:
     with col2:
         col_left, col_right = st.columns(2)
         with col_left:
-            st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/Flag_of_the_Netherlands.svg.webp", width=20)
-            st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/Flag_of_the_United_Kingdom_(1-2).svg.webp", width=25)
-            st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/Flag_of_Finland.svg.webp", width=30)
-            st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/Flag_of_Japan.svg.webp", width=35)
+            st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/Flag_of_the_Netherlands.svg.webp", width=40)
+            st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/Flag_of_the_United_Kingdom_(1-2).svg.webp", width=40)
+            st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/Flag_of_Finland.svg.webp", width=40)
+            st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/Flag_of_Japan.svg.webp", width=40)
         with col_right:
             st.write("Fluent")
             st.write("Fluent")
