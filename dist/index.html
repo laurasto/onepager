@@ -42,8 +42,8 @@ with tab1:
     finish = ['2026-05-13','2025-09-20','2025-8-30','2018-10-15','2018-05-15','2017-10-15','2016-12-30','2013-12-30','2010-12-30','2010-01-23']
     wdf['Start'] = pd.to_datetime(start).strftime('%b-%Y')
     wdf['Finish'] = pd.to_datetime(finish).strftime('%b-%Y')
-    wdf['Client/Employer'] = ['13*'*'/Accenture','6*'*'/Accenture','8*"🔹"/Accenture','3*"⚪"/Accenture','3*"*"/Accenture',\\
-                              '8*"▪️"/Accenture','TU Eindhoven','Wageningen University',\\
+    wdf['Client/Employer'] = [13*'*'+'/Accenture',6*'*'+'/Accenture',8*"🔹"+'/Accenture',3*"⚪"+'/Accenture',3*"*"+'/Accenture',\\
+                              8*"▪️"+'/Accenture','TU Eindhoven','Wageningen University',\\
                               'ASML/TU Eindhoven','TU Eindhoven']
     wdf['Sector'] = ['Bio Tech','Aviation','Financial','Transport','Insurance','Telecom','Higher Education',
                      'Higher Education','Semiconductor','Higher Education']
