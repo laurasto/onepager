@@ -16,7 +16,7 @@ with st.sidebar:
 tab1, tab2, tab3 = st.tabs(["Work Experience", "Education & Languages", "Certificates"],width="stretch")
 
 with tab1:
-    # stlite cannot read external data, so hardcoded
+    # stlite cannot read external data, so data is hardcoded here until I create a typescript version
     wdf = pd.DataFrame(columns=['Start', 'Finish', 'Client/Employer', 'Sector', 'Functional', 'Technical'])
     start = ['2025-09-01','2024-09-01','2019-01-01','2018-06-15','2017-10-15','2017-08-17','2014-01-01','2011-01-01','2010-02-01','2006-02-01']
     finish = ['2026-05-13','2025-09-20','2025-8-30','2018-10-15','2018-05-15','2017-10-15','2016-12-30','2013-12-30','2010-12-30','2010-01-23']
@@ -81,7 +81,7 @@ with tab3:
             'class="custom-link-button">GitHub Actions</a>',
             unsafe_allow_html=True)
         st.markdown("""<style>.custom-link-button {
-            background-color: ; 
+            background-color: #FFF0F5; 
             color: #191970 !important;
             border-radius: 8px;}</style>
         """, unsafe_allow_html=True)
@@ -89,7 +89,7 @@ with tab3:
             'class="custom-link-button">Fast API</a>',
             unsafe_allow_html=True)
         st.markdown("""<style>.custom-link-button {
-                    background-color: ; 
+                    background-color: #F0FFF0; 
                     color: #191970 !important;
                     border-radius: 8px;}</style>
                 """, unsafe_allow_html=True)
@@ -108,7 +108,7 @@ with tab3:
             'class="custom-link-button">Apache Spark (TM) SQL for Data Analysts</a>',
             unsafe_allow_html=True)
         st.markdown("""<style>.custom-link-button {
-                    background-color: ; 
+                    background-color: #F5FFFA; 
                     color: #191970 !important;
                     border-radius: 8px;}</style>
                 """, unsafe_allow_html=True)
@@ -126,7 +126,7 @@ with tab3:
             'class="custom-link-button">Machine Learning with PySpark: Data Analysis using SQL</a>',
             unsafe_allow_html=True)
         st.markdown("""<style>.custom-link-button {
-                    background-color: ; 
+                    background-color: #F0FFFF; 
                     color: #191970 !important;
                     border-radius: 8px;}</style>
                 """, unsafe_allow_html=True)
