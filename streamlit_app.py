@@ -83,10 +83,10 @@ with tab2:
     with col2:
         col_left, col_right = st.columns(2)
         with col_left:
-            st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/Flag_of_the_Netherlands.svg.webp", width=15)
-            st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/Flag_of_the_United_Kingdom_(1-2).svg.webp", width=15)
-            st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/Flag_of_Finland.svg.webp", width=15)
-            st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/Flag_of_Japan.svg.webp", width=15)
+            st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/Flag_of_the_Netherlands.svg.webp", width=20)
+            st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/Flag_of_the_United_Kingdom_(1-2).svg.webp", width=25)
+            st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/Flag_of_Finland.svg.webp", width=30)
+            st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/Flag_of_Japan.svg.webp", width=35)
         with col_right:
             st.write("Fluent")
             st.write("Fluent")
