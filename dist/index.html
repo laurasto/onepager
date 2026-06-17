@@ -7,7 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <title>Streamlit App</title>
+    <title>OnePager</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@stlite/browser@1.0.0/build/stlite.css"
@@ -24,8 +24,7 @@
 import streamlit as st
 import pandas as pd
 
-st.set_page_config(layout="wide")
-
+st.set_page_config(page_title="OnePager", page_icon=":lemon:", layout="wide", initial_sidebar_state=None, menu_items=None)
 with st.sidebar:
     st.write("*Contact Info*")
     st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/accenture.aug.2017-072.jpg", width=200)
@@ -48,16 +47,28 @@ with tab1:
                               'ASML/TU Eindhoven','TU Eindhoven']
     wdf['Sector'] = ['Bio Tech','Aviation','Financial','Transport','Insurance','Telecom','Higher Education',
                      'Higher Education','Semiconductor','Higher Education']
-    wdf['Functional'] = ['Build prototype central application where lab personnel can easily query\\n internal information from database, clean and organize historical data to database',
-            'Deliver an interactive view on all contracts, users, their status and location etc. as python Plotly dashboard',
-            'Data Quality monitoring, building dashboards and reports for proactive measures, building scripts to retrieve, and validate external data sources for data quality improvements',
-            'Build and validate ML models, using various customer data to predict parcel weights and dimensions',
-            'Build application to extract, validate and display information from images of handwritten forms, using ML and Computer Vision',
-            'Train deep neural networks to recognize modem status from images',
-            'Design and lecture bachelor courses on medical image analysis and processing',
-            'Research on mathematical modeling of metabolic and genetic networks of tomatoes for cost efficient trait improvement',
-            'Research on alternative geometric modeling of diffraction gratings',
-            'PhD project on geometric modeling of diffusion tensor images to capture axonal connectivities in brain']
+    wdf['Functional'] = ['''Built a prototype for central application where lab personnel can easily query internal information from database,
+                         cleaned and organized historical data to database. Delivered an application that compares internal sequences with large public 
+                         database retrieving the closest matches for internal use via the prototype app. Delivered numerous reports/spreadsheets to 
+                         answer on-demand queries on various data from the client.''',
+            '''Delivered a python Plotly dashboard for interactive view on all past and current contracts, contracts that are about to end in the near future, 
+            all application users, their status and location etc. For this project Azure DevOps was used for agile rituals and weekly feedback session were organized with business 
+            to make sure specifications are as intended.''',
+            '''Data Quality (DQ) monitoring using standard existing software Informatica. Building custom dashboards and daily reports for proactive measures, with front-end as Power BI 
+             and back-end as python/SQL application. Building scripts to retrieve, and validate external data sources for DQ improvements. Organizing and attending Hackathons
+             to apply Machine Learning (ML) and other innovative technologies to DQ monitoring.''',
+            'Building and validating ML models, using various customer data to predict parcel weights and dimensions.',
+            '''Building software to extract information from low quality images of handwritten forms using ML and Computer Vision, validating the 
+            extractions against database using fuzzy matching and displaying the final result in a 
+             javascript application.''',
+            'Training deep neural networks to directly recognize the status of a machine from an uploaded foto of the machine.',
+            '''Designing and lecturing bachelor courses on medical image analysis and processing. Organizing tutorial sessions, making and assessing exams. ''',
+            '''Research on mathematical/statistical modeling of metabolic and genetic networks of tomatoes for cost efficient trait improvement
+             in collaboration with biologists.''',
+            '''Research on alternative geometric modeling of diffraction gratings, a model with Bezier curves seemed to better reflect 
+            actual scanning electroscope images than the existing piecewise linear model.''',
+            '''PhD project on geometric modeling of diffusion tensor images to capture axonal connectivities in brain as geodesics in the local geometry defined by 
+            high angular resolution diffusion images.''']
     wdf['Technical'] = ['Databricks, Python, Streamlit, GitHub  Actions, Bitbucket, AzureML, Spotfire, Jira',
                         'Python, AzureDevOps, Plotly, Infinity, SQL',
                         'Informatica, Python, Power BI, Databricks, AzureDevOps, Git, SQL, OracleDB, IBM DB, DBVisualiser, SQLDeveloper, Mainframe',
@@ -79,15 +90,29 @@ with tab1:
                                 'Technical': st.column_config.TextColumn(help="Double-click a cell for wrapped text")})
 
 with tab2:
-    st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/Eindhoven_University_of_Technology_logo.png", width=150)
-    st.write("PhD Applied Mathematics, 2010")
-    st.link_button("Thesis in Google Scholar", 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZJZIls8AAAAJ&cstart=20&pagesize=80&citation_for_view=ZJZIls8AAAAJ:WF5omc3nYNoC')
-    st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/Helsinki_University_of_Technology_logo.png", width=150)
-    st.write('Helsinki University of Technology')
-    st.write('Licenciate\\'s Degree in Mathematics, 2009')
-    st.link_button("Thesis", 'https://alexandria.tue.nl/openaccess/Metis226803.pdf')
-    st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/Helsinki_University_logo.jpg", width=150)
-    st.write('Master\\'s Degree in Mathematics, 2000')
+    col1, col2 = st.columns(2)
+    with col1:
+        st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/Eindhoven_University_of_Technology_logo.png", width=150)
+        st.write("PhD Applied Mathematics, 2010")
+        st.link_button("Thesis in Google Scholar", 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZJZIls8AAAAJ&cstart=20&pagesize=80&citation_for_view=ZJZIls8AAAAJ:WF5omc3nYNoC')
+        st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/Helsinki_University_of_Technology_logo.png", width=150)
+        st.write('Helsinki University of Technology')
+        st.write('Licenciate\\'s Degree in Mathematics, 2009')
+        st.link_button("Thesis", 'https://alexandria.tue.nl/openaccess/Metis226803.pdf')
+        st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/Helsinki_University_logo.jpg", width=150)
+        st.write('Master\\'s Degree in Mathematics, 2000')
+    with col2:
+        col_left, col_right = st.columns(2)
+        with col_left:
+            st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/Flag_of_the_Netherlands.svg.webp")
+            st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/Flag_of_the_United_Kingdom_(1-2).svg.webp")
+            st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/Flag_of_Finland.svg.webp")
+            st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/Flag_of_Japan.svg.webp")
+        with col_right:
+            st.write("Fluent")
+            st.write("Fluent")
+            st.write("Mother tongue")
+            st.write("Native")
 
 with tab3:
     st.link_button("GitHub Actions", "https://www.udacity.com/certificate/e/01dd1d86-79b2-11f0-b061-2b2f4f747398")
