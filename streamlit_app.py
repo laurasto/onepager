@@ -7,10 +7,11 @@ st.set_page_config(page_title="OnePager", page_icon="🌳", layout="wide")
 with st.sidebar:
     st.write("*Contact Info*")
     st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/accenture.aug.2017-072.jpg", width=200)
-    st.write("Laura Astola")
+    st.write("Dr. Laura Astola")
     st.write("AI/ML Computational Science Associate Manager")
     st.write("📱 +31 622 098 982")
     st.write("📧 laura.astola@accenture.com")
+    st.write("✉️ l.j.astola@gmail.com")
 
 tab1, tab2, tab3 = st.tabs(["Work Experience", "Education & Languages", "Certificates"],width="stretch")
 
