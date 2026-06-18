@@ -1,4 +1,4 @@
-# An GitHub "compatible" mini cv
+# A GitHub "compatible" mini cv
 
 import streamlit as st
 import pandas as pd
@@ -78,7 +78,7 @@ with tab2:
         border-radius: 8px;
     }
     </style>
-    """, unsafe_allow_html=True
+    """, unsafe_allow_html=True)
 
     col1, col2 = st.columns(2)
     with col1:
