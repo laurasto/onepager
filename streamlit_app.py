@@ -70,6 +70,16 @@ with tab1:
                                 'Technical': st.column_config.TextColumn(help="Double-click a cell for wrapped text")})
 
 with tab2:
+    st.markdown("""
+    <style>
+    div[data-testid="stHorizontalBlock"] > div:nth-child(2) {
+        background-color: #FFF8DC;
+        padding: 16px;
+        border-radius: 8px;
+    }
+    </style>
+    """, unsafe_allow_html=True
+
     col1, col2 = st.columns(2)
     with col1:
         st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/Eindhoven_University_of_Technology_logo.png", width=140)
