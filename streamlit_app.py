@@ -73,7 +73,7 @@ with tab2:
     st.markdown("""
     <style>
     div[data-testid="stHorizontalBlock"] > div:nth-child(2) {
-        background-color: #FFF8DC;
+        background-color: #F0FFFF;
         padding: 16px;
         border-radius: 8px;
     }
@@ -92,17 +92,19 @@ with tab2:
         st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/Helsinki_University_logo.jpg", width=150)
         st.write('Master\'s Degree in Mathematics, 2000')
     with col2:
-        col_left, col_right = st.columns(2)
-        with col_left:
-            st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/Flag_of_the_Netherlands.svg.webp", width=40)
-            st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/Flag_of_the_United_Kingdom_(1-2).svg.webp", width=40)
-            st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/Flag_of_Finland.svg.webp", width=40)
-            st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/Flag_of_Japan.svg.webp", width=40)
-        with col_right:
-            st.write("Fluent")
-            st.write("Fluent")
-            st.write("Mother tongue")
-            st.write("Native")
+            st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/Flag_of_the_Netherlands.svg.webp", width=50)
+            st.write("Dutch: Fluent")
+            st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/Flag_of_the_United_Kingdom_(1-2).svg.webp", width=50)
+            st.write("English: Fluent")
+            st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/Flag_of_Finland.svg.webp", width=50)
+            st.write("Finnish: Mother tongue")
+            st.image("https://raw.githubusercontent.com/laurasto/onepager/master/images/Flag_of_Japan.svg.webp", width=50)
+            st.write("Japanese: Native")
+
+
+
+
+
 
 with tab3:
     st.link_button("GitHub Actions", "https://www.udacity.com/certificate/e/01dd1d86-79b2-11f0-b061-2b2f4f747398")
