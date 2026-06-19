@@ -27,28 +27,29 @@ with tab1:
                               'ASML/TU Eindhoven','TU Eindhoven']
     wdf['Sector'] = ['Bio Tech','Aviation','Financial','Transport','Insurance','Telecom','Higher Education',
                      'Higher Education','Semiconductor','Higher Education']
-    wdf['Functional'] = ['''Built a prototype for central application where lab personnel can easily query internal information from database,
-                         cleaned and organized historical data to database. Delivered an application that compares internal sequences with large public 
-                         database retrieving the closest matches for internal use via the prototype app. Delivered numerous reports/spreadsheets to 
-                         answer on-demand queries on various data from the client.''',
-            '''Delivered a python Plotly dashboard for interactive view on all past and current contracts, contracts that are about to end in the near future, 
-            all application users, their status and location etc. For this project Azure DevOps was used for agile rituals and weekly feedback session were organized with business 
-            to make sure specifications are as intended.''',
-            '''Data Quality (DQ) monitoring using standard existing software Informatica. Building custom dashboards and daily reports for proactive measures, with front-end as Power BI 
-             and back-end as python/SQL application. Building scripts to retrieve, and validate external data sources for DQ improvements. Organizing and attending Hackathons
-             to apply Machine Learning (ML) and other innovative technologies to DQ monitoring.''',
-            'Building and validating ML models, using various customer data to predict parcel weights and dimensions.',
-            '''Building software to extract information from low quality images of handwritten forms using ML and Computer Vision, validating the 
-            extractions against database using fuzzy matching and displaying the final result in a 
-             javascript application.''',
-            'Training deep neural networks to directly recognize the status of a machine from an uploaded foto of the machine.',
-            '''Designing and lecturing bachelor courses on medical image analysis and processing. Organizing tutorial sessions, making and assessing exams. ''',
-            '''Research on mathematical/statistical modeling of metabolic and genetic networks of tomatoes for cost efficient trait improvement
-             in collaboration with biologists.''',
-            '''Research on alternative geometric modeling of diffraction gratings, a model with Bezier curves seemed to better reflect 
-            actual scanning electroscope images than the existing piecewise linear model.''',
-            '''PhD project on geometric modeling of diffusion tensor images to capture axonal connectivities in brain as geodesics in the local geometry defined by 
-            high angular resolution diffusion images.''']
+    wdf['Functional'] = [("Built a prototype for central application where lab personnel can easily query internal information from database,"
+                           "cleaned and organized historical data to database. Delivered an application that compares internal sequences with large public" 
+                         "database retrieving the closest matches for internal use via the prototype app. Delivered numerous reports/spreadsheets to" 
+                         "answer on-demand queries on various data from the client."),
+                         ("Delivered a python Plotly dashboard for interactive view on all past and current contracts, contracts that are about to end in "
+                          "the near future, all application users, their status and location etc. For this project Azure DevOps was used for agile rituals"
+                          "and weekly feedback session were organized with business to make sure specifications are as intended."),
+                         ("Data Quality (DQ) monitoring using standard existing software Informatica. Building custom dashboards and daily reports for "
+                          "proactive measures, with front-end as Power BI and back-end as python/SQL application. Building scripts to retrieve,"
+                          "and validate external data sources for DQ improvements. Organizing and attending Hackathons to apply Machine Learning (ML)"
+                          " and other innovative technologies to DQ monitoring."),
+                         ("Building and validating ML models, using various customer data to predict parcel weights and dimensions."),
+                         ("Building software to extract information from low quality images of handwritten forms using ML and Computer Vision, "
+                          "validating the extractions against database using fuzzy matching and displaying the final result in a javascript application."),
+                         ("Training deep neural networks to directly recognize the status of a machine from an uploaded foto of the machine."),
+                         ("Designing and lecturing bachelor courses on medical image analysis and processing. Organizing tutorial sessions, "
+                          "making and assessing exams."),
+                         ("Research on mathematical/statistical modeling of metabolic and genetic networks of tomatoes for cost efficient "
+                          "trait improvement in collaboration with biologists."),
+                         ("Research on alternative geometric modeling of diffraction gratings, a model with Bezier curves seemed to better reflect" 
+                          " actual scanning electroscope images than the existing piecewise linear model."),
+                         ("PhD project on geometric modeling of diffusion tensor images to capture axonal connectivities in brain as geodesics "
+                          "in the local geometry defined by high angular resolution diffusion images.")]
     wdf['Technical'] = ['Databricks, Python, Streamlit, GitHub  Actions, Bitbucket, AzureML, Spotfire, Jira',
                         'Python, AzureDevOps, Plotly, Infinity, SQL',
                         'Informatica, Python, Power BI, Databricks, AzureDevOps, Git, SQL, OracleDB, IBM DB, DBVisualiser, SQLDeveloper, Mainframe',
