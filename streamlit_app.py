@@ -108,6 +108,7 @@ with tab2:
 
 
 with tab3:
+    st.link_button("Databricks Certified Machine Learning Engineer Associate", "https://credentials.databricks.com/295b7373-33ab-4ad6-88e9-f20b7a6d149f#acc.ejycYRId")
     st.link_button("GitHub Actions", "https://www.udacity.com/certificate/e/01dd1d86-79b2-11f0-b061-2b2f4f747398")
     st.link_button("Fast API", "https://www.udacity.com/certificate/e/bab5e9a8-6eab-11f0-bb2a-5ffcb77ac1ac")
     st.link_button("Developing AI Applications on Azure", "https://www.coursera.org/account/accomplishments/verify/MXJBBXUXWSS5")
