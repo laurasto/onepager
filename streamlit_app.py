@@ -50,9 +50,9 @@ with tab1:
                           " actual scanning electroscope images than the existing piecewise linear model."),
                          ("PhD project on geometric modeling of diffusion tensor images to capture axonal connectivities in brain as geodesics "
                           "in the local geometry defined by high angular resolution diffusion images.")]
-    wdf['Technical'] = ['Databricks, Python, Streamlit, GitHub  Actions, Bitbucket, AzureML, Spotfire, Jira',
+    wdf['Technical'] = ['Databricks, Python, Streamlit, PySpark, GitHub  Actions, Bitbucket, AzureML, Spotfire, Jira, YAML',
                         'Python, AzureDevOps, Plotly, Infinity, SQL',
-                        'Informatica, Python, Power BI, Databricks, AzureDevOps, Git, SQL, OracleDB, IBM DB, DBVisualiser, SQLDeveloper, Mainframe',
+                        'Informatica, Python, Power BI, Databricks, AzureDevOps, Git, SQL, OracleDB, Airflow, IBM DB, DBVisualiser, SQLDeveloper, Mainframe, Azure DataFactory',
                         'Python, Sk-Learn, XGBoost, SQL',
                         'Python,  Open CV, Azure cognitive services, Fuzzy matching, Javascript',
                         'Python, Keras,  Open CV, Javascript',
